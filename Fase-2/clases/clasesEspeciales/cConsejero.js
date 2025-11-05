@@ -1,4 +1,5 @@
 import { Personaje } from "../cPersonaje.js";
+import { Rey } from "./cRey.js";
 
 export class Consejero extends Personaje{
 
@@ -30,8 +31,12 @@ export class Consejero extends Personaje{
         
     }
 
-    aconsejar(){
+    aconsejar(rey){
         
-        console.log(`Hablo como Consejero  de especialidad ${this.#especialidad}: hazlo, y si sale mal, siempre podemos culpar al dragon.`);
+        if(rey instanceof Rey){
+            console.log(`${this.getnombre()}  aconseja a ${rey.getnombre()}: hazlo, y si sale mal, siempre podemos culpar al dragon.`);
+        }else{
+            console.log(`Quien pide consejo no es rey, que se ponga a la cola`);
+        }
     }
 };
