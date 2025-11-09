@@ -115,7 +115,9 @@ Daño actual ${this.#arma.getdaño()}`)
 
     atacar(objetivo){
 
-        let daño = Math.floor(this.#arma.getdaño())
+        let daño = Math.floor(this.#arma.getdaño()* (0.7+Math.random()* 0.6));
+        console.log(`${this.getnombre()} ataca a  ${objetivo.getnombre()} causando ${daño} puntos de daño.`);
+        objetivo.recibirDaño(daño);
 
     }
 };

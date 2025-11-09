@@ -69,7 +69,11 @@ poniente.asignarCasa(lannister);
 stark.mostrarMiembros();
 lannister.mostrarMiembros();
 
-const loboVsLeon = new Batalla(stark,lannister);
+const loboVsLeon = new Batalla();
+
+loboVsLeon.batalla(stark,lannister); 
+
+loboVsLeon.mostrarGuerrerosMuertosEnCombate();
 
 
 
