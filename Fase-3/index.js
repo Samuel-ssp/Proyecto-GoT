@@ -1,8 +1,5 @@
 import { Guerrero } from "./clases/clasesEspeciales/cGuerrero.js";
-import { Consejero } from "./clases/clasesEspeciales/cConsejero.js";
-import { Rey } from "./clases/clasesEspeciales/cRey.js";
 import { Casa } from "./clases/cCasa.js";
-import { Reino } from "./clases/cReino.js";
 import { Arma } from "./clases/cArma.js";
 import { Batalla } from "./clases/cBatalla.js";
 
@@ -23,9 +20,6 @@ const gregor = new Guerrero("Gregor Clegane", 38);
 let stark = new Casa("Stark", "Cuidao que refresca");
 let lannister = new Casa("Lannister", "Tienen dinero para enterrarte");
 let baratheon = new Casa("Baratheon", "Nuestra es la furia");
-
-// REINOS        
-let poniente = new Reino("Poniente");      // Reino: Poniente 
 
 // ARMAS
 const garra = new Arma("Garra", 90);
@@ -59,10 +53,6 @@ lannister.añadirMiembro(cersei);
 lannister.añadirMiembro(tyrion);
 lannister.añadirMiembro(gregor);
 
-//Añadir casas a los reinos
-poniente.asignarCasa(stark);
-poniente.asignarCasa(lannister);
-
 /// MENU
 
 //  MOSTRAR MIEMBROS
@@ -74,7 +64,3 @@ const loboVsLeon = new Batalla();
 loboVsLeon.batalla(stark,lannister); 
 
 loboVsLeon.mostrarGuerrerosMuertosEnCombate();
-
-
-
-
