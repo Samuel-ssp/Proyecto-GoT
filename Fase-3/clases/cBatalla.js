@@ -14,7 +14,7 @@ export class Batalla{
     }
 
     batalla(casa1,casa2){
-       
+    
         let guerreros1=[];
         let guerreros2=[];
 
